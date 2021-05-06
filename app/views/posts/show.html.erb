@@ -1,24 +1,28 @@
+<div class='p-3 mb-4 bg-success text-white rounded'>
+
 <p id="notice"><%= notice %></p>
 
-<p>
+<p class="text-center">
   <strong>Titre:</strong>
   <%= @post.titre %>
 </p>
 
-<p>
+<p class="text-center">
   <strong>Description:</strong>
   <%= @post.description %>
 </p>
 
-<p>
+<p class="text-center">
   <strong>Published:</strong>
   <%= @post.published %>
 </p>
 
-<p>
+<p class="text-center">
   <strong>Published at:</strong>
   <%= @post.published_at %>
 </p>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+</div>
+
+
+<%= render partial: 'navigator', locals: { link_name: 'Edit', link_path: edit_post_path(@post)} %>
